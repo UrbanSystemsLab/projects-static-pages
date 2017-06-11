@@ -26,9 +26,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 include: 
-  - .travis.yml
 skip_render:
-  - .travis.yml
 
 # Writing
 new_post_name: :title.md # File name of new posts
