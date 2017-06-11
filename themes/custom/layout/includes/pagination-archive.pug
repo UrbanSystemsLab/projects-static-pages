@@ -1,0 +1,38 @@
+.col.col-12.push-bottom.align-center
+	nav#pagination
+		nav.pagination.align-center
+			ul
+				li.prev
+					if page.prev_link
+						a(class='prev', href=url_for(page.prev_link))!= '←'
+					else
+						a.muted(class='prev')!= '←'
+				li
+					ul
+						- var n = 0
+						while n < page.total
+							- n++
+							if page.current === n
+								li.active
+									a(class='next')!= n
+							else if page.current > n
+								if n === 1
+									//- archives/page : Go back to archives on page 1
+									li
+										a(class='prev', href=('../../'))!= n
+								else
+									li
+										a(class='prev', href=('../'+n))!= n
+							else if page.current <= n
+								if page.current === 1
+									//- archives/page : Navigate fwd from page 1
+									li
+										a(class='next', href=('./page/' +n))!= n
+								else
+									li
+										a(class='next', href=('../'+n))!= n
+				li.next
+					if page.next_link
+						a(class='next', href=url_for(page.next_link))!= '→'
+					else
+						a.muted(class='next')!= '→'

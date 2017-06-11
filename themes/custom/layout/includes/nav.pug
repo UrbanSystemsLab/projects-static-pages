@@ -1,0 +1,12 @@
+.col-12.col
+	.row.align-center#top-nav
+		each url, label in theme.menu
+			a.strong.col.text-center(href=url)= label
+
+a.black.large#mobile-nav(href='#', data-component='offcanvas', data-target='#offcanvas-left') 
+	i.kube-menu 
+#offcanvas-left.hide
+	nav
+		ul
+			each url, label in theme.menu
+				li: a.strong.col.text-center(href=url)= label

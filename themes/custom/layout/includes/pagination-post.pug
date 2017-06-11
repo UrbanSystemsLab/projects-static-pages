@@ -1,0 +1,17 @@
+.col.col-12.push-bottom.push-center
+	nav.pagination.pager.flat
+		ul
+			if page.prev
+				li.prev
+					span.label.tag Prev
+					a(href=url_for(page.prev.path))!= page.prev.title
+			else
+				li.prev
+
+			li.next
+				if page.next
+					li.next
+						span.label.tag Next
+						a(href=url_for(page.next.path))!= page.next.title
+				else
+					li.next

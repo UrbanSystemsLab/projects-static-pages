@@ -1,0 +1,27 @@
+extends includes/layout.pug
+
+block content
+	canvas#bgAnimation
+	.row.container
+		.col.col-4.offset-2.push-middle#hero
+			.row#hero-logo
+				a(href='http://urbansystemslab.com/', target="newwindow")
+					img(src="/img/logo_black.png")
+			.row.bar
+			.row
+				h1.title Data Visualization
+				h4#hero-desc We are a network of collaborating interdisciplinary scientists and practitioners from diverse world cities working together to promote, design, and implement urban infrastructure that is resilient in the face of future extreme events, provides ecosystem services, improves social well being, and exploits new technologies in ways that benefit all segments of urban populations.
+			.row
+					a.button.yellow.upper.strong.text-center(href='/archives', role='button') Case Studies
+					a.button.black.upper.strong.outline.text-center(href='#', role='button') About
+		#shadow.push-center
+
+	script(src ='/js/Tween.min.js')
+	script(src ='/js/stats.min.js')
+	script(src ='/js/three.min.js')
+	script(src ='/js/OrbitControls.js')
+	script(src ='/js/custom.js')
+
+
+	//- include includes/recent-posts.pug
+	//- include includes/pagination.pug

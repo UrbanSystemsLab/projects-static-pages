@@ -1,0 +1,14 @@
+language: generic
+deploy:
+  provider: s3
+  access_key_id: AKIAIHA424WLJR5RGMYQ
+  secret_access_key:
+    secure: R+n71B9ypmJ4jOsUqR9SEz9CGQVUNNRs4j1FyAyofImxp+BSdLnmh509vuRY/9lkd7dahg+qrsSd7VWsHNouoCMpZu10wYVwwJunsQymoji3f8exuzqRzHmgmLN0/3eZQ2hSEI5833ipm59ePZnGTjJWbYWVtUhG9dWO3MG2ktfK1QlyyY7H/sbgpoixmAIV4tfYzcBRC0hUfWONUqEBbsy8VJHgaVfEgRPKGVPJlg3MS+ZvGLUI/+9PsHLw/P5UfmZxvkG7i3MDJLFL5MIEGyiLIe+mHzBdTybTDQNSV6E7a6T3hlsTrZkJeVgW+zkzG90KckCLz8dAa6aE2XyDAs37wDd/4ZDuHoDZIHtMWVbkMwABoKEze6TRDi5dLr22rKFMKCvQ/IsgHGELV2wfdj7/QUihjb44IkVCbf/o24Svdc8/aaEnIh+VmPWBs+DqAlXpIkdIBv8RjcAoFueX5FLT+YczOxu86JQdUAuMdySs+s/v0iDpTsh9DKca1I3vDA3/in9u4wRXEfudjZjPE4WAKJO0XM9KzvgaxhlNad7QM2nFlp21UN0EB5sYWpoQhmnhvpfw4j6ByOMrx4iOUkr041zfuQqcKKnKflPEMX8lqtH6UhtZjWsmBmiAwIhsjlSCGWO4f/xW20ZWocP8yM3AeHf9LSGrVeTeWgfVjnE=
+  bucket: elasticbeanstalk-us-west-2-893554244568
+  skip_cleanup: true
+  region: us-west-2
+  acl: public_read  
+
+env:
+  global:
+    - DEPLOY_BRANCHES=pages

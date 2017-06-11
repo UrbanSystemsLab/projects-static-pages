@@ -1,0 +1,180 @@
+@import kube
+
+.button
+	margin: 5px 10px 5px 0px
+
+.button.yellow
+	@include button(#000, $color-warning) // $text-color, $back-color
+
+.button.black
+	@include button(#000, $color-black) // $text-color, $back-color
+
+html 
+	background-color: $color-aluminum
+	height : 100vh
+
+	body
+		height : 100vh
+		
+		#bgAnimation
+			position: fixed
+			top: 0
+			z-index: -100
+
+		#content-inner, #content-outer	
+			// height : 100vh
+
+		.container
+			min-height : 100vh
+			width: 100%
+			padding: 2em
+
+
+		#hero-logo
+			width: 200px
+			height: 104px
+			margin-left: -55px
+			margin-bottom: 10px
+
+		.title
+			margin-left: -3px
+		
+		.bar
+			content: ''
+			margin: 20px 0px 0px 0px
+			width: 38px
+			height: 5px
+			background: $color-warning
+			z-index: -10
+
+		#shadow
+			position: fixed
+			content: ''
+			top: 85%
+			width: 100%
+			height: 30px
+			background: rgba(37, 37, 37, 0.12)
+			z-index: -10
+			border-radius: 50%
+			-webkit-filter: blur(30px) /* Safari */
+			filter: blur(30px)
+
+		// Nav
+		#top-nav
+			padding: 2em 10em 4em 10em
+			a
+				text-decoration: none
+				color: #000
+				font-size: 1em
+				margin: 0 1em
+		#mobile-nav
+			display: none
+		.offcanvas
+			li
+				margin: 2em 0
+				font-size: 1.1em
+			a
+				text-decoration: none
+				color: #000
+
+		.archive-list
+			margin-top: 3em
+			.archive-list-item
+				margin: 0.5em 0
+				a
+					text-decoration: none
+					color: #000
+					font-size: 1em
+				sup
+					padding: 0em 1em
+
+		// pagination
+		.pagination a.muted
+			opacity: 0.2
+		.pagination a.muted:hover
+			border-color: transparent
+		
+		// Posts
+		#post
+			margin-top: 2em
+
+		h5.date, h5.authors
+			font-size: 0.95em
+			// line-height: 12px
+			font-style: italic
+			color: #aaa
+			font-weight: 100
+			letter-spacing: 0.4px
+
+		h5.date
+			font-weight: 100
+			margin-top: 1em
+			margin-bottom: 0em
+
+		// Video embeds
+		.embed-container, .embed-responsive
+			position: relative
+			padding-bottom: 56.25%
+			height: 0
+			overflow: hidden
+			max-width: 100%
+			margin: 3em 0
+
+		.embed-responsive-item
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+		.quote
+			font-size: 1.6em
+			line-height: 1.2em
+			font-style: italic
+			text-align: center
+			padding: 0em 2em
+			// color: $color-warning
+
+		ul.cols
+			margin: 0 0
+			li
+				margin: 20px 0
+				list-style: none
+				padding: 0em 0em 0.5em 0em
+			.quote
+				padding: 0em 2em
+		
+		// code
+		pre, td, th
+			padding: 0em 0.2em
+		figure
+			margin: 3em 0
+		figure pre
+			margin-bottom: 0
+		.gutter pre
+			border: none
+		.code pre
+			padding: 0em 1em
+		.line
+			height: 20px
+		
+@media screen and (max-width: 800px) 
+	body
+		width: 100%
+	#hero-logo
+		margin-left: 0px !important
+
+	#top-nav
+		display: none
+
+	#mobile-nav
+		display: block !important
+		padding: 1em 1em
+		width: 3em
+		text-decoration: none
+
+	.container 
+		padding: 0em 1em !important
+
+	.quote
+		padding: 0em 0em !important
