@@ -1,0 +1,180 @@
+.button {
+  margin: 5px 10px 5px 0px; }
+
+.button.yellow {
+  color: #000;
+  background-color: #f7ba45; }
+  .button.yellow:hover {
+    color: #000;
+    background-color: #fbdea7; }
+  .button.yellow:disabled, .button.yellow.disabled {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(247, 186, 69, 0.7); }
+  .button.yellow.outline {
+    background: none;
+    color: #f7ba45;
+    border-color: #f7ba45; }
+    .button.yellow.outline:hover {
+      color: rgba(247, 186, 69, 0.6);
+      border-color: rgba(247, 186, 69, 0.5); }
+    .button.yellow.outline:disabled, .button.yellow.outline.disabled {
+      background: none;
+      color: rgba(247, 186, 69, 0.7);
+      border-color: rgba(247, 186, 69, 0.5); }
+
+.button.black {
+  color: #000;
+  background-color: #0d0d0e; }
+  .button.black:hover {
+    color: #000;
+    background-color: #3e3e43; }
+  .button.black:disabled, .button.black.disabled {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(13, 13, 14, 0.7); }
+  .button.black.outline {
+    background: none;
+    color: #0d0d0e;
+    border-color: #0d0d0e; }
+    .button.black.outline:hover {
+      color: rgba(13, 13, 14, 0.6);
+      border-color: rgba(13, 13, 14, 0.5); }
+    .button.black.outline:disabled, .button.black.outline.disabled {
+      background: none;
+      color: rgba(13, 13, 14, 0.7);
+      border-color: rgba(13, 13, 14, 0.5); }
+
+html {
+  background-color: #f8f8f8;
+  height: 100vh; }
+  html body {
+    height: 100vh; }
+    html body #bgAnimation {
+      position: fixed;
+      top: 0;
+      z-index: -100; }
+    html body .container {
+      min-height: 100vh;
+      width: 100%;
+      padding: 2em; }
+    html body #hero-logo {
+      width: 200px;
+      height: 104px;
+      margin-left: -55px;
+      margin-bottom: 10px; }
+    html body .title {
+      margin-left: -3px; }
+    html body .bar {
+      content: '';
+      margin: 20px 0px 0px 0px;
+      width: 38px;
+      height: 5px;
+      background: #f7ba45;
+      z-index: -10; }
+    html body #shadow {
+      position: fixed;
+      content: '';
+      top: 85%;
+      width: 100%;
+      height: 30px;
+      background: rgba(37, 37, 37, 0.12);
+      z-index: -10;
+      border-radius: 50%;
+      -webkit-filter: blur(30px);
+      filter: blur(30px); }
+    html body #top-nav {
+      padding: 2em 10em 4em 10em; }
+      html body #top-nav a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1em;
+        margin: 0 1em; }
+    html body #mobile-nav {
+      display: none; }
+    html body .offcanvas li {
+      margin: 2em 0;
+      font-size: 1.1em; }
+    html body .offcanvas a {
+      text-decoration: none;
+      color: #000; }
+    html body .archive-list {
+      margin-top: 3em; }
+      html body .archive-list .archive-list-item {
+        margin: 0.5em 0; }
+        html body .archive-list .archive-list-item a {
+          text-decoration: none;
+          color: #000;
+          font-size: 1em; }
+        html body .archive-list .archive-list-item sup {
+          padding: 0em 1em; }
+    html body .pagination a.muted {
+      opacity: 0.2; }
+    html body .pagination a.muted:hover {
+      border-color: transparent; }
+    html body #post {
+      margin-top: 2em; }
+    html body h5.date, html body h5.authors {
+      font-size: 0.95em;
+      font-style: italic;
+      color: #aaa;
+      font-weight: 100;
+      letter-spacing: 0.4px; }
+    html body h5.date {
+      font-weight: 100;
+      margin-top: 1em;
+      margin-bottom: 0em; }
+    html body .embed-container, html body .embed-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 3em 0; }
+    html body .embed-responsive-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    html body .quote {
+      font-size: 1.6em;
+      line-height: 1.2em;
+      font-style: italic;
+      text-align: center;
+      padding: 0em 2em; }
+    html body ul.cols {
+      margin: 0 0; }
+      html body ul.cols li {
+        margin: 20px 0;
+        list-style: none;
+        padding: 0em 0em 0.5em 0em; }
+      html body ul.cols .quote {
+        padding: 0em 2em; }
+    html body pre, html body td, html body th {
+      padding: 0em 0.2em; }
+    html body figure {
+      margin: 3em 0; }
+    html body figure pre {
+      margin-bottom: 0; }
+    html body .gutter pre {
+      border: none; }
+    html body .code pre {
+      padding: 0em 1em; }
+    html body .line {
+      height: 20px; }
+
+@media screen and (max-width: 800px) {
+  body {
+    width: 100%; }
+  #hero-logo {
+    margin-left: 0px !important; }
+  #top-nav {
+    display: none; }
+  #mobile-nav {
+    display: block !important;
+    padding: 1em 1em;
+    width: 3em;
+    text-decoration: none; }
+  .container {
+    padding: 0em 1em !important; }
+  .quote {
+    padding: 0em 0em !important; } }

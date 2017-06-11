@@ -8,4 +8,7 @@ deploy:
   skip_cleanup: true
   region: us-west-2
   acl: public_read  
-  local-dir: public
+
+env:
+  global:
+    - DEPLOY_BRANCHES=pages
