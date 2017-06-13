@@ -5,6 +5,7 @@ To deploy
 Instead of native Hexo-deployer-s3 we are using Travis CI to push it specific folder on shared S3 bucket for more flexibility
 
 ```sh
+hexo clean && hexo generate
 git add . && git commit -m "update" && git push origin master
 ```
 
