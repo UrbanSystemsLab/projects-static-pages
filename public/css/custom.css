@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 .button {
   margin: 5px 10px 5px 0px; }
 
@@ -136,9 +137,9 @@ html {
       width: 100%;
       height: 100%; }
     html body .quote {
+      font-family: 'Inconsolata', monospace;
       font-size: 1.6em;
-      line-height: 1.2em;
-      font-style: italic;
+      line-height: 1.15em;
       text-align: center;
       padding: 0em 2em; }
     html body ul.cols {
@@ -149,18 +150,6 @@ html {
         padding: 0em 0em 0.5em 0em; }
       html body ul.cols .quote {
         padding: 0em 2em; }
-    html body pre, html body td, html body th {
-      padding: 0em 0.2em; }
-    html body figure {
-      margin: 3em 0; }
-    html body figure pre {
-      margin-bottom: 0; }
-    html body .gutter pre {
-      border: none; }
-    html body .code pre {
-      padding: 0em 1em; }
-    html body .line {
-      height: 20px; }
 
 @media screen and (max-width: 800px) {
   body {

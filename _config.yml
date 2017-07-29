@@ -39,10 +39,15 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'okaidia'
+  line_number: false    # default false
 
 # Category & Tag
 default_category: uncategorized
@@ -70,12 +75,6 @@ theme: custom
 ## Docs: https://hexo.io/docs/deployment.html
 # deploy:
 #   type:
-
-# You can use this:
-deploy:
-  type: git
-  repo: https://github.com/UrbanSystemsLab/projects-static-pages
-  branch: pages
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
