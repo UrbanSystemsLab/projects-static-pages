@@ -15,8 +15,8 @@ document.onmousemove = handleMouseMove
 window.addEventListener('resize', onWindowResize, false)
 
 var stats = new Stats()
-// stats.showPanel(1) // 0: fps, 1: ms, 2: mb, 3+: custom
-// document.body.appendChild(stats.dom)
+	// stats.showPanel(1) // 0: fps, 1: ms, 2: mb, 3+: custom
+	// document.body.appendChild(stats.dom)
 
 var renderer = new THREE.WebGLRenderer({
 	canvas: bgAnimation,
@@ -32,7 +32,14 @@ document.body.appendChild(renderer.domElement)
 var material, plane
 
 for (var i = 0; i < 13; i++) {
-	material = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../img/contours/c' + i + '.png'), transparent: true, opacity: 0, color: 0x000000 })
+	material = new THREE.MeshBasicMaterial({
+		map: new THREE.TextureLoader().load('../img/contours/c' + i + '.png', texture => {
+			// console.log(texture.image.currentSrc)
+		}),
+		transparent: true,
+		opacity: 0,
+		color: 0x000000
+	})
 	plane = new THREE.Mesh(new THREE.PlaneGeometry(30, 30, 1), material)
 	plane.position.z = i / 4 - 0.8
 	scene.add(plane)
@@ -40,15 +47,15 @@ for (var i = 0; i < 13; i++) {
 }
 
 material = new THREE.PointsMaterial({
-	color: 0xcccccc,
-	size: 1.9,
+	color: 0xbbbbbb,
+	size: 2,
 	sizeAttenuation: false
 })
 
 var geometry = new THREE.Geometry()
 var x, y, z
 
-for (i = 0; i < 1500; i++) {
+for (var j = 0; j < 1500; j++) {
 	x = (Math.random() * 80) - 50
 	y = (Math.random() * 80) - 40
 	z = (Math.random() * 80) - 40
@@ -89,5 +96,5 @@ function showContour(i, plane) {
 	setTimeout(function() {
 		new TWEEN.Tween(plane.material).to({ opacity: 0.2 }, 1200).easing(TWEEN.Easing.Bounce.In).start()
 		new TWEEN.Tween(plane.position).to({ z: plane.position.z + 0.8 }, 1500).easing(TWEEN.Easing.Exponential.InOut).start()
-	}, 350 * i + 500)
+	}, 400 * i + 1200)
 }
