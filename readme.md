@@ -9,7 +9,7 @@ hexo clean && hexo generate
 git add . && git commit -m "update" && git push origin master
 ```
 
-Locally
+## Local server
 
 ```sh
 npm install
