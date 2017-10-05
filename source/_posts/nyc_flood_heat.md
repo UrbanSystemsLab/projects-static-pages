@@ -27,7 +27,7 @@ OpenStreetMap Data {col col-6 small italic highlight}
 Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 
-```js
+```javascript
 /*
   Warning : This is overwrite .geojson filename in the directory with same filename as .json file  
   To run the script:

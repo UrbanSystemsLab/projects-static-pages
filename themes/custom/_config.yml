@@ -16,11 +16,13 @@ favicon: /favicon.ico
 stylesheets:
 - /css/kube.min.css
 - /css/custom.css
+- /css/prism-hopscotch.css
 
 # scripts loaded in the end of the body
 scripts:
 - /js/jquery.min.js
 - /js/kube.js
+- /js/prism.js
 
 node_sass:
   outputStyle: nested
