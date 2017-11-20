@@ -1,4 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700");
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url("../fonts/IBMPlex/woff/IBMPlexSans-Regular-Latin1.woff") format("woff"), url("../fonts/IBMPlex/woff2/IBMPlexSans-Regular-Latin1.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url("../fonts/IBMPlex/woff/IBMPlexSans-Italic-Latin1.woff") format("woff"), url("../fonts/IBMPlex/woff2/IBMPlexSans-Italic-Latin1.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url("../fonts/IBMPlex/woff/IBMPlexSans-Light-Latin1.woff") format("woff"), url("../fonts/IBMPlex/woff2/IBMPlexSans-Light-Latin1.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url("../fonts/IBMPlex/woff/IBMPlexSans-LightItalic-Latin1.woff") format("woff"), url("../fonts/IBMPlex/woff2/IBMPlexSans-LightItalic-Latin1.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url("../fonts/IBMPlex/woff/IBMPlexSans-SemiBold-Latin1.woff") format("woff"), url("../fonts/IBMPlex/woff2/IBMPlexSans-SemiBold-Latin1.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url("../fonts/IBMPlex/woff/IBMPlexSans-SemiBoldItalic-Latin1.woff") format("woff"), url("../fonts/IBMPlex/woff2/IBMPlexSans-SemiBoldItalic-Latin1.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url("../fonts/IBMPlex/woff/IBMPlexMono-Light-Latin1.woff") format("woff"), url("../fonts/IBMPlex/woff2/IBMPlexMono-Light-Latin1.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal; }
+
 .button {
   margin: 5px 10px 5px 0px; }
 
@@ -48,7 +90,13 @@ html {
   background-color: #f8f8f8;
   height: 100vh; }
   html body {
-    height: 100vh; }
+    height: 100vh;
+    font-family: 'IBMPlexSans'; }
+    html body .button, html body button, html body h1, html body h1.title, html body h2, html body h3, html body h4, html body h5, html body h6 {
+      font-family: 'IBMPlexSans'; }
+    html body code[class*="language-"], html body pre[class*="language-"] {
+      font-family: 'IBMPlexMono';
+      font-weight: 200; }
     html body #bgAnimation {
       position: fixed;
       top: 0;
@@ -107,6 +155,14 @@ html {
           font-size: 1em; }
         html body .archive-list .archive-list-item sup {
           padding: 0em 1em; }
+    html body .filters {
+      margin: 5em 0em; }
+    html body .archive-filter {
+      margin-top: 1em; }
+      html body .archive-filter .filter-title {
+        width: 100%; }
+      html body .archive-filter li {
+        margin: 0 0.5em; }
     html body .pagination a.muted {
       opacity: 0.2; }
     html body .pagination a.muted:hover {
@@ -137,8 +193,8 @@ html {
       width: 100%;
       height: 100%; }
     html body .quote {
-      font-family: 'Roboto Slab', monospace;
       font-size: 1.5em;
+      font-weight: 500;
       line-height: 1.15em;
       text-align: center;
       padding: 0em 2em; }
@@ -150,6 +206,12 @@ html {
         padding: 0em 0em 0.5em 0em; }
       html body ul.cols .quote {
         padding: 0em 2em; }
+    html body pre code {
+      background: none; }
+
+@media screen and (max-width: 1200px) {
+  .content-wrapper {
+    width: 80%; } }
 
 @media screen and (max-width: 800px) {
   body {

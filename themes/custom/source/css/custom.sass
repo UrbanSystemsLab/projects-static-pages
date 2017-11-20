@@ -1,6 +1,50 @@
 @import kube
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700')
 
+//  IBM Plex Font : https://ibm.github.io/type/
+@font-face 
+	font-family: 'IBMPlexSans'
+	src: url('../fonts/IBMPlex/woff/IBMPlexSans-Regular-Latin1.woff') format('woff'),	url('../fonts/IBMPlex/woff2/IBMPlexSans-Regular-Latin1.woff2') format('woff2')
+	font-weight: normal
+	font-style: normal
+
+@font-face 
+	font-family: 'IBMPlexSans'
+	src: url('../fonts/IBMPlex/woff/IBMPlexSans-Italic-Latin1.woff') format('woff'),	url('../fonts/IBMPlex/woff2/IBMPlexSans-Italic-Latin1.woff2') format('woff2')
+	font-weight: normal
+	font-style: italic
+
+@font-face 
+	font-family: 'IBMPlexSans'
+	src: url('../fonts/IBMPlex/woff/IBMPlexSans-Light-Latin1.woff') format('woff'),	url('../fonts/IBMPlex/woff2/IBMPlexSans-Light-Latin1.woff2') format('woff2')
+	font-weight: 200
+	font-style: normal
+
+@font-face 
+	font-family: 'IBMPlexSans'
+	src: url('../fonts/IBMPlex/woff/IBMPlexSans-LightItalic-Latin1.woff') format('woff'),	url('../fonts/IBMPlex/woff2/IBMPlexSans-LightItalic-Latin1.woff2') format('woff2')
+	font-weight: 200
+	font-style: italic
+
+@font-face 
+	font-family: 'IBMPlexSans'
+	src: url('../fonts/IBMPlex/woff/IBMPlexSans-SemiBold-Latin1.woff') format('woff'),	url('../fonts/IBMPlex/woff2/IBMPlexSans-SemiBold-Latin1.woff2') format('woff2')
+	font-weight: 500
+	font-style: normal
+
+@font-face 
+	font-family: 'IBMPlexSans'
+	src: url('../fonts/IBMPlex/woff/IBMPlexSans-SemiBoldItalic-Latin1.woff') format('woff'),	url('../fonts/IBMPlex/woff2/IBMPlexSans-SemiBoldItalic-Latin1.woff2') format('woff2')
+	font-weight: 500
+	font-style: italic
+
+@font-face 
+	font-family: 'IBMPlexMono'
+	src: url('../fonts/IBMPlex/woff/IBMPlexMono-Light-Latin1.woff') format('woff'),	url('../fonts/IBMPlex/woff2/IBMPlexMono-Light-Latin1.woff2') format('woff2')
+	font-weight: 200
+	font-style: normal
+
+
 .button
 	margin: 5px 10px 5px 0px
 
@@ -16,7 +60,15 @@ html
 
 	body
 		height : 100vh
+		font-family: 'IBMPlexSans' 
 
+		.button, button, h1, h1.title, h2, h3, h4, h5, h6
+			font-family: 'IBMPlexSans' 
+
+		code[class*="language-"], pre[class*="language-"]
+			font-family: 'IBMPlexMono'
+			font-weight: 200
+			
 		#bgAnimation
 			position: fixed
 			top: 0
@@ -88,6 +140,16 @@ html
 					font-size: 1em
 				sup
 					padding: 0em 1em
+		
+		.filters
+			margin: 5em 0em
+		
+		.archive-filter
+			margin-top: 1em
+			.filter-title
+				width: 100%
+			li
+				margin: 0 0.5em
 
 		// pagination
 		.pagination a.muted
@@ -129,8 +191,9 @@ html
 			height: 100%
 
 		.quote
-			font-family: 'Roboto Slab', monospace
+			// font-family: 'Roboto Slab', monospace
 			font-size: 1.5em
+			font-weight: 500
 			line-height: 1.15em
 			// font-style: italic
 			text-align: center
@@ -161,7 +224,10 @@ html
 		// 	padding: 0em 1em
 		// .line
 		// 	height: 20px
-		
+@media screen and (max-width: 1200px) 
+	.content-wrapper
+		width: 80% 	
+
 @media screen and (max-width: 800px) 
 	body
 		width: 100%
@@ -176,7 +242,7 @@ html
 		padding: 1em 1em
 		width: 3em
 		text-decoration: none
-
+	
 	.container 
 		padding: 0em 1em !important
 

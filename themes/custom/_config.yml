@@ -15,8 +15,8 @@ favicon: /favicon.ico
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/kube.min.css
+- /css/prism-xonokai.css
 - /css/custom.css
-- /css/prism-hopscotch.css
 
 # scripts loaded in the end of the body
 scripts:

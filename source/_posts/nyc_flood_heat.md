@@ -4,7 +4,9 @@ date: 2017-03-01
 authors: Jaskirat R., Daniel Sauter, and Timon McPhearson
 ---
 
-The Urban Systems Lab is creating new cutting edge 3D visualizations combining multiple sources of social, ecological, and technical infrastructure data for the first time at parcel scale resolution to examine equity in risk and vulnerability to climate driven extreme events such as coastal flooding and heat waves. Here you can see an example of this 3D viz approach
+The Urban Systems Lab is creating new cutting edge 3D visualizations combining multiple sources of social, ecological, and technical infrastructure data for the first time at parcel scale resolution to examine equity in risk and vulnerability to climate driven extreme events such as coastal flooding and heat waves. Here you can see an example of this 3D viz approach.
+
+[**Project Link**](/projects/nyc-flood-heat-impacts)
 
 @[vimeo](213720138)
 

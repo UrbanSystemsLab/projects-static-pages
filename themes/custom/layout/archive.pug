@@ -8,10 +8,33 @@ block content
 
 	.row.container
 		include includes/nav.pug
-		.col.col-6.push-center
+		.col.col-6.push-center.content-wrapper
 			.row.bar
 			.row
 				h1.title Case Studies
+			.col.col-12.filters
+				.row.archive-filter
+					h4.filter-title Urban Scenarios
+					ul
+						li.label.upper.outline.focus Show All
+						li.label.upper.base.success Present
+						li.label.upper.outline Future
+				.row.archive-filter
+					h4.filter-title Cities
+					ul
+						li.label.upper.outline.focus Show All
+						li.label.upper.outline San Juan
+						li.label.upper.base.success New York City
+						li.label.upper.outline Valdivia
+						li.label.upper.outline Baltimore
+						li.label.upper.outline Miami
+						li.label.upper.outline Phoenix
+						li.label.upper.outline Portland
+						li.label.upper.outline Syracuse
+						li.label.upper.outline Hermosillo
+				
+
+
 			.row.archive-list
 				- page.posts.each(function(article){
 					.archive-list-item.col-12
